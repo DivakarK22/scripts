@@ -3,17 +3,13 @@
 #!/bin/bash
 
 cd $HOME/git
-
 echo select the repo
-
 read gitfolder
-
-
 pwd
-
 if [ -e "$gitfolder" ]
 then
   cd $gitfolder
+  git stash
   gitpull=`git pull | awk '{print $1}'`
     if [ "$gitpull" == 'Already' ]
     then
