@@ -2,15 +2,18 @@
 
 #!/bin/bash
 
-gitdir=`cd /root/scripts`
-
-cd $gitdir
+cd $HOME/git
 
 echo select the repo
 
-read $gitfolder
+read gitfolder
+
+cd $gitfolder
+
+pwd 
 
 if [ -e "$gitfolder" ]
+
 then 
    echo folder not Exist Quitting
 else
