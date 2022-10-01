@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ssh root@cent1
-
-w > w.txt
+echo
+echo Hello World
+echo
 
