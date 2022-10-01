@@ -1,19 +1,20 @@
+
+#!/bin/bash
+
 #!/bin/bash
 
 #VARIABLES
-t='top | head - 10'
-file='chmod 777 $save'
-save='$t > top.txt'
+remove=`rm -rf top.txt`
+t=`top | head -10 > top.txt`
+file=`chown devops:devops top.txt`
 
+echo
+$remove
 echo
 pwd
 echo
-cd
-echo
-$t 
-echo
-$save
+$t
 echo
 $file
-echo
 echo EOF
+
