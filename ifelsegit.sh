@@ -17,8 +17,7 @@ if [ -e "$gitfolder" ]
 then 
    echo folder not Exist Quitting
 else
-   cd $gitfolder
-
+  
    gitpull=`git pull | awk '{print $1}'`
 
    if [ "$gitpull" == 'Already' ]
