@@ -8,24 +8,21 @@ echo select the repo
 
 read gitfolder
 
-cd $gitfolder
 
-pwd 
+pwd
 
 if [ -e "$gitfolder" ]
-
-then 
-   echo folder not Exist Quitting
+then
+  cd $gitfolder
+  gitpull=`git pull | awk '{print $1}'`
+    if [ "$gitpull" == 'Already' ]
+    then
+      echo "Already on top"
+    else
+      echo "Repo is updaing now"
+    fi
 else
-  
-   gitpull=`git pull | awk '{print $1}'`
-
-   if [ "$gitpull" == 'Already' ]
-   then
-     echo "Already on top"
-   else 
-     echo "Repo is updaing now"
-   fi
+  echo folder not Exist Quitting
 fi
 
 #Modified ((Checking))
