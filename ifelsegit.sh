@@ -3,7 +3,6 @@
 #!/bin/bash
 
 gitdir=`cd /root/scripts`
-gitpull=`git pull | awk '{print $1}'`
 
 cd $gitdir
 
@@ -16,6 +15,8 @@ echo Checking $gitfolder
 cd $gitfolder
 
 echo running git pull
+
+gitpull=`git pull | awk '{print $1}'`
 
 if [ "$gitpull" == 'Already' ]
 then
