@@ -13,7 +13,7 @@ sudo createrepo /var/www/html/
 touch /etc/yum.repos.d/local.repo
 
 cat <<EOF > /etc/yum.repos.d/local.repo
-local-base]
+[local-base]
 name=Yum Local Base
 baseurl=http://192.168.1.61:80/
 enabled=1
