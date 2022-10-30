@@ -26,6 +26,9 @@ sudo cat <<EOF > /etc/systemd/system/node_exporter.service
         WantedBy=multi-user.target
 EOF
 
+#staring and enabling services 
+
+
 systemctl stop firewalld
 
 systemctl daemon-reload
