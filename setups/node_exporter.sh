@@ -1,5 +1,7 @@
 #/bin/bash
 
+yum install wget -y
+
 mkdir /opt/node-export/
 
 cd /opt/node-export/
@@ -28,6 +30,7 @@ EOF
 
 #staring and enabling services 
 
+systemctl disable firewalld
 
 systemctl stop firewalld
 
