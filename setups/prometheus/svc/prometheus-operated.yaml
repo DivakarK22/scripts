@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-11-02T16:24:37Z"
+  labels:
+    operated-prometheus: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operated-prometheus: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6045aee5-7a17-4ea4-be1f-fba2b7daa7b6"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          .: {}
+          k:{"port":9090,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app.kubernetes.io/name: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: PrometheusOperator
+    operation: Update
+    time: "2022-11-02T16:24:37Z"
+  name: prometheus-operated
+  namespace: default
+  ownerReferences:
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Prometheus
+    name: stable-kube-prometheus-sta-prometheus
+    uid: 6045aee5-7a17-4ea4-be1f-fba2b7daa7b6
+  resourceVersion: "97641"
+  selfLink: /api/v1/namespaces/default/services/prometheus-operated
+  uid: 21980489-3ec9-492a-9547-4a79a8be82c8
+spec:
+  clusterIP: None
+  ports:
+  - name: http-web
+    port: 9090
+    protocol: TCP
+    targetPort: http-web
+  selector:
+    app.kubernetes.io/name: prometheus
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stable
+    meta.helm.sh/release-namespace: default
+    prometheus.io/scrape: "true"
+  creationTimestamp: "2022-11-02T16:24:34Z"
+  labels:
+    app.kubernetes.io/component: metrics
+    app.kubernetes.io/instance: stable
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: prometheus-node-exporter
+    app.kubernetes.io/part-of: prometheus-node-exporter
+    app.kubernetes.io/version: 1.3.1
+    helm.sh/chart: prometheus-node-exporter-4.4.2
+    jobLabel: node-exporter
+    release: stable
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+          f:prometheus.io/scrape: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+          f:jobLabel: {}
+          f:release: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":9100,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/name: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: helm
+    operation: Update
+    time: "2022-11-02T16:24:34Z"
+  name: stable-prometheus-node-exporter
+  namespace: default
+  resourceVersion: "97435"
+  selfLink: /api/v1/namespaces/default/services/stable-prometheus-node-exporter
+  uid: 5cb19d68-0e07-4999-96cd-afd9384712c8
+spec:
+  clusterIP: 10.104.73.157
+  ports:
+  - name: http-metrics
+    port: 9100
+    protocol: TCP
+    targetPort: 9100
+  selector:
+    app.kubernetes.io/instance: stable
+    app.kubernetes.io/name: prometheus-node-exporter
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,95 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stable
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2022-11-02T16:24:34Z"
+  labels:
+    app: kube-prometheus-stack-prometheus
+    app.kubernetes.io/instance: stable
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 41.7.2
+    chart: kube-prometheus-stack-41.7.2
+    heritage: Helm
+    release: stable
+    self-monitor: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:heritage: {}
+          f:release: {}
+          f:self-monitor: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":9090,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app.kubernetes.io/name: {}
+          f:prometheus: {}
+        f:sessionAffinity: {}
+    manager: helm
+    operation: Update
+    time: "2022-11-02T16:24:34Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: controller
+    operation: Update
+    time: "2022-11-02T16:25:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:type: {}
+    manager: kubectl
+    operation: Update
+    time: "2022-11-02T16:25:38Z"
+  name: stable-kube-prometheus-sta-prometheus
+  namespace: default
+  resourceVersion: "97988"
+  selfLink: /api/v1/namespaces/default/services/stable-kube-prometheus-sta-prometheus
+  uid: 4a39dc8f-32eb-4d05-b2b7-cec29a21938f
+spec:
+  clusterIP: 10.108.46.238
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: http-web
+    nodePort: 30199
+    port: 9090
+    protocol: TCP
+    targetPort: 9090
+  selector:
+    app.kubernetes.io/name: prometheus
+    prometheus: stable-kube-prometheus-sta-prometheus
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.1.25

@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: stable
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2022-11-02T16:24:34Z"
+  labels:
+    app: kube-prometheus-stack-operator
+    app.kubernetes.io/instance: stable
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 41.7.2
+    chart: kube-prometheus-stack-41.7.2
+    heritage: Helm
+    release: stable
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:chart: {}
+          f:heritage: {}
+          f:release: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+          f:release: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: helm
+    operation: Update
+    time: "2022-11-02T16:24:34Z"
+  name: stable-kube-prometheus-sta-operator
+  namespace: default
+  resourceVersion: "97431"
+  selfLink: /api/v1/namespaces/default/services/stable-kube-prometheus-sta-operator
+  uid: 4ada7b6b-9869-44e3-b1e1-d1092f1a5940
+spec:
+  clusterIP: 10.104.9.203
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: https
+  selector:
+    app: kube-prometheus-stack-operator
+    release: stable
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
