@@ -5,7 +5,7 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sh install_salt.sh -P -M
 
 cat <<EOF > /etc/salt/master
-interface: 192.168.0.161
+interface: $HOSTNAME
 EOF
 
 systemctl start salt-master.service
