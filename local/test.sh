@@ -32,3 +32,5 @@ sudo systemctl restart network
 yum update -y 
 
 yum install git -y
+
+reboot
