@@ -2,7 +2,7 @@ cat <<EOF > /etc/sysconfig/network-scripts/ifcfg-eth0
 TYPE=Ethernet
 BOOTPROTO=none
 #Server IP #
-IPADDR= $1
+IPADDR=$1
 # Subnet #
 PREFIX=24
 # Set default gateway IP #
