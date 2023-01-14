@@ -14,6 +14,7 @@ yum install -y yarn
 
 #Install Ruby 2.7.0
 cd
+rm -rf .rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
