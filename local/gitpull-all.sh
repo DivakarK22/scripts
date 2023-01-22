@@ -9,6 +9,7 @@ for D in ./*; do
      echo "cd'ing to $D"
         cd "$D"
      echo "pulling latest"
+        git stash
         git pull
         cd ..
      echo "exiting from Dir"
