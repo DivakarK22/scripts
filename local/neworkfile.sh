@@ -28,8 +28,6 @@ EOF
 
 echo "updated all files"
 
-sudo systemctl restart network
-
 yum update -y
 
 yum install git -y
@@ -37,3 +35,5 @@ yum install git -y
 cd $HOME
 
 git clone https://github.com/DivakarK22/scripts.git
+
+sudo reboot
