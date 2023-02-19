@@ -1,0 +1,11 @@
+Vagrant.configure(2) do |config| 
+    config.vm.box = "centos/7"
+    config.vm.hostname = "ansible"
+    config.vm.box_check_update = false    
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "1048"
+      vb.cpus = "1"
+    end
+    config.vm.provision :shell, path: "init.sh"
+  end
+  
