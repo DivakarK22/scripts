@@ -20,7 +20,7 @@ rm -rf .rbenv
 cd
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 cd /home/vagrant
-git clone https://github.com/rbenv/rbenv.git /home/vagrant
+git clone https://github.com/rbenv/rbenv.git /home/vagrant/.rbenv
 
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
