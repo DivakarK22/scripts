@@ -15,9 +15,16 @@ sudo yum install -y yarn
 #Install Ruby 2.7.0
 cd
 rm -rf .rbenv
+cd /home/vagrant
+rm -rf .rbenv
+cd
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd /home/vagrant
+git clone https://github.com/rbenv/rbenv.git /home/vagrant
+
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/rbenv/ruby-build.git /home/vagrant/.rbenv/plugins/ruby-build
 cd
 #Install the latest version of Ruby (v2.7.0)
 rbenv install 2.7.0
