@@ -6,7 +6,7 @@ yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel li
 
 #Install Nodejs
 curl -sL https://rpm.nodesource.com/setup_12.x | bash
-yum install -y nodejs
+yum install -y nodejs ruby
 
 #Install Yarn
 curl -sL https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
