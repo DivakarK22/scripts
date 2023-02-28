@@ -1,7 +1,7 @@
 #!/bin/bash
-
+yum remove ruby* -y
 yum install gcc-c++ patch readline readline-devel zlib zlib-devel libffi-devel \
- openssl-devel make bzip2 autoconf automake libtool bison sqlite-devel
+ openssl-devel make bzip2 autoconf automake libtool bison sqlite-devel -y
 
 curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
