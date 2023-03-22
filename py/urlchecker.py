@@ -1,12 +1,15 @@
 import urllib.request
-
+import sys
 
 def check_website_status():
-    prompt = "Please enter a website URL: "
     while True:
-        # asks for URL to check
-        # adds in https or http if necessary
-        url = "http://sensu:3000"
+        url = sys.argv[1]
+        if url.startswith('https://'):
+            pass
+        elif url.startswith('http://'):
+            pass
+        else:
+            url = 'https://' + url
         try:
             # tries to make a request to the URL that was input
             # uses defined headers that are not a "bot"
@@ -17,9 +20,8 @@ def check_website_status():
             page = urllib.request.urlopen(req)
             code = str(page.getcode())
             print('The website ' + url + ' has returned a ' + code + ' code')
-            break
-        except Exception as i:
-                break
-
-
+            sys.exit(0)
+        except Exception as e:
+            print("CRITICAL:HOST SEEMS OFFLINE/NOT-REACHABLE--->"+url)
+            sys.exit(2)
 check_website_status()

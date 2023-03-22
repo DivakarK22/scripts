@@ -2,7 +2,7 @@
 #import the library
 import qrcode
 #link to the website
-input_data = "https://github.com/Buzzpy"
+input_data = "https://github.com/DivakarK22?tab=repositories"
 #Creating object
 #version: defines size of image from integer(1 to 40), box_size = size of each box in pixels, border = thickness of the border.
 qr = qrcode.QRCode(version=2,box_size=10,border=1)
