@@ -22,3 +22,17 @@ EOF
 
 sudo yum repolist
 
+sudo yum install nfs-utils -y
+
+sudo mkdir /nfs
+sudo chmod 777 /nfs
+systemctl enable rpcbind
+systemctl enable nfs-server
+systemctl enable nfs-lock
+systemctl enable nfs-idmap
+systemctl start rpcbind
+systemctl start nfs-server
+systemctl start nfs-lock
+systemctl start nfs-idmap
+systemctl restart nfs-server
+
