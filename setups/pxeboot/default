@@ -1,3 +1,4 @@
+# /var/lib/tftpboot/pxelinux.cfg/default
 default menu.c32
 prompt 0
 timeout 30
