@@ -6,4 +6,6 @@ $PWD
 
 sudo git pull
 
+sudo systemctl restart dhcpd
+
 echo "DONE"
