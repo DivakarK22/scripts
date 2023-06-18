@@ -1,5 +1,9 @@
 #!/bin/bash
+mv /etc/exports /etc/exports.bk
 
+sudo yum remove nfs-utils -y
+
+sudo yum install nfs-utils -y
 
 systemctl restart rpcbind
 systemctl restart nfs-server
