@@ -8,10 +8,11 @@ for D in ./*; do
     if [ -d "$D" ]; then
      echo "cd'ing to $D"
         cd "$D"
-     echo "pulling latest"
+     echo "Pulling latest update from $D , Reverting unsaved data"
         git stash
         git pull
+        echo "exiting from $D"
         cd ..
-     echo "exiting from Dir"
+        date
     fi
 done
