@@ -1,4 +1,4 @@
-#!/bin/bash
+
 #var
 cd $HOME/git
 for D in ./*; do
