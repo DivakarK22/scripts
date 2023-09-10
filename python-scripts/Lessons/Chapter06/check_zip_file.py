@@ -1,7 +1,7 @@
 import zipfile
 
-for f_name in ['hello.py', 'work.zip', 'welcome.py', 'sample.txt', 'test.zip']:
+for i in ['hello.py', 'work.zip', 'welcome.py', 'sample.txt', 'test.zip']:
 	try:
-		print('{:}        {}'.format(f_name, zipfile.is_zipfile(f_name)))
+		print('{:}        {}'.format(i, zipfile.is_zipfile(i)))
 	except IOError as err:
-		print('{:}        {}'.format(f_name, err))
+		print('{:}        {}'.format(i, err))
