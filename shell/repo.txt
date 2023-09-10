@@ -1,0 +1,13 @@
+/DivakarK22/scripts
+/DivakarK22/pxe-boot
+/DivakarK22/dhcp
+/DivakarK22/salt
+/DivakarK22/divakark22.github.io
+/DivakarK22/jenkins-job-builder
+/DivakarK22/ansible-playbooks
+/DivakarK22/vagrant
+/DivakarK22/dockerfiles
+/DivakarK22/k8_sample
+/DivakarK22/awesomeScripts
+/DivakarK22/simple-bash-scripts
+/DivakarK22/kickstart-files

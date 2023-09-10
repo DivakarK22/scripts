@@ -1,7 +1,7 @@
 import tkinter as tk
 import random
 import colors as c
-
+TK_SILENCE_DEPRECATION=1
 
 class Game(tk.Frame):
     def __init__(self):
