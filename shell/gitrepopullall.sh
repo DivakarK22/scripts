@@ -11,16 +11,17 @@ curl https://github.com/$repo_name?tab=repositories | grep "<a href=" | grep ite
 cut -c6- /$HOME/git/garbage.txt > /$HOME/git/repo_tmp.txt
 cat /$HOME/git/repo_tmp.txt | sed 's/"//g' > /$HOME/git/repo.txt
 
-#Removing tmp's
-rm -rf /$HOME/git/garbage.txt /$HOME/git/repo_tmp.txt
-
+#Using txt file
 file="/$HOME/git/repo.txt"
+
 #Cloning repo's
 while read -r line; do
 cd /$HOME/git
 git clone https://github.com/$line.git
 done <$file
 
+#Removing tmp's
+rm -rf /$HOME/git/garbage.txt /$HOME/git/repo_tmp.txt /$HOME/git/repo.txt
 
 
 
