@@ -6,14 +6,12 @@ read -p "Enter the repo username to clone:" repo_name
 #Create git under user home dir
 mkdir /$HOME/git
 
-<<<<<<< HEAD
 #INSTALL GIT
 yum install git -y
-=======
+
 #Create a folder
 mkdir /$HOME/git/$repo_name
 
->>>>>>> c1e5666 (updated)
 #Collecting repo details
 curl https://github.com/$repo_name?tab=repositories | grep "<a href=" | grep itemprop | awk '{print $2}' > /$HOME/git/garbage.txt
 cut -c6- /$HOME/git/garbage.txt > /$HOME/git/repo_tmp.txt
