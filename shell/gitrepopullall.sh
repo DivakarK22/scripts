@@ -9,7 +9,7 @@ mkdir /$HOME/git
 #INSTALL GIT
 yum install git -y
 
-#Create a folder
+#Create a user folder
 mkdir /$HOME/git/$repo_name
 
 #Collecting repo details
