@@ -4,8 +4,8 @@ echo "Installing zsh as default Shell"
 
 echo "Install required Packages"
 
-yum install wget curl git -y | true
-dnf install wget curl git -y | true
+yum install wget curl git zsh -y | true
+dnf install wget curl git zsh -y | true
 
 echo "Installng zsh"
 curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh > /opt/install.sh
