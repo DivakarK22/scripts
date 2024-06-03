@@ -14,7 +14,7 @@ echo "Cloning ZSH Theme file"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 echo "Modifying zsh config"
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k/powerlevel10k"/' 
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc
 source ~/.zshrc
 
 echo "Please use "p10k configure" to configure the Theme"
