@@ -1,0 +1,19 @@
+SELECT
+  timestamp AS "time",
+  thread_name,
+  status
+FROM jenkins_threads_blocked
+WHERE $__timeFilter(timestamp)
+AND status = 'BLOCKED'
+ORDER BY timestamp DESC
+LIMIT 100
+
+psql -h 192.168.1.7 -U jstack -d jstack -c "
+CREATE TABLE jenkins_threads_blocked (
+    id SERIAL PRIMARY KEY,
+    timestamp TIMESTAMPTZ NOT NULL,
+    thread_name TEXT NOT NULL,
+    priority TEXT,
+    status TEXT,
+    full_dump TEXT
+);
